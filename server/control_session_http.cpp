@@ -24,7 +24,7 @@
 
 using namespace std;
 
-static constexpr const char* HTTP_SERVER_NAME = "Snapcast";
+static constexpr const char* HTTP_SERVER_NAME = "Octaviocast";
 
 namespace
 {
