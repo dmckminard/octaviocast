@@ -250,7 +250,7 @@ int main(int argc, char** argv)
                     break;
                 try
                 {
-                    if (browser.browse("_snapcast._tcp", avahiResult, 5000))
+                    if (browser.browse("_octaviocast._tcp", avahiResult, 5000))
                     {
                         settings.server.host = avahiResult.ip;
                         settings.server.port = avahiResult.port;
