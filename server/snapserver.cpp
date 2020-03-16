@@ -246,18 +246,18 @@ int main(int argc, char* argv[])
 
         boost::asio::io_context io_context;
 #if defined(HAS_AVAHI) || defined(HAS_BONJOUR)
-        auto publishZeroConfg = std::make_unique<PublishZeroConf>("Snapcast", io_context);
+        auto publishZeroConfg = std::make_unique<PublishZeroConf>("Octaviocast", io_context);
         vector<mDNSService> dns_services;
-        dns_services.emplace_back("_snapcast._tcp", settings.stream.port);
-        dns_services.emplace_back("_snapcast-stream._tcp", settings.stream.port);
+        dns_services.emplace_back("_octaviocast._tcp", settings.stream.port);
+        dns_services.emplace_back("_octaviocast-stream._tcp", settings.stream.port);
         if (settings.tcp.enabled)
         {
-            dns_services.emplace_back("_snapcast-jsonrpc._tcp", settings.tcp.port);
-            dns_services.emplace_back("_snapcast-tcp._tcp", settings.tcp.port);
+            dns_services.emplace_back("_octaviocast-jsonrpc._tcp", settings.tcp.port);
+            dns_services.emplace_back("_octaviocast-tcp._tcp", settings.tcp.port);
         }
         if (settings.http.enabled)
         {
-            dns_services.emplace_back("_snapcast-http._tcp", settings.http.port);
+            dns_services.emplace_back("_octaviocast-http._tcp", settings.http.port);
         }
         publishZeroConfg->publish(dns_services);
 #endif
