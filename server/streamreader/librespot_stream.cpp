@@ -41,7 +41,7 @@ LibrespotStream::LibrespotStream(PcmListener* pcmListener, boost::asio::io_conte
     string cache = uri_.getQuery("cache", "");
     string volume = uri_.getQuery("volume", "100");
     string bitrate = uri_.getQuery("bitrate", "320");
-    string devicename = uri_.getQuery("devicename", "Snapcast");
+    string devicename = uri_.getQuery("devicename", "Octaviocast");
     string onevent = uri_.getQuery("onevent", "");
     bool normalize = (uri_.getQuery("normalize", "false") == "true");
     bool autoplay = (uri_.getQuery("autoplay", "false") == "true");
